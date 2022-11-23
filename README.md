@@ -1,6 +1,9 @@
 ## Analisador de Filmes/Séries/Programas de TV
 
-# ![eclipse70x70](https://user-images.githubusercontent.com/84586733/203624142-4161ead7-a3e0-4f36-b2a7-4a638dcd6ee9.png)![kisspng-selenium-test-automation-software-testing-computer-5c9268a4f05d17 1003108915530989169845_resized (1)](https://user-images.githubusercontent.com/84586733/203623384-88b13cd8-8d54-4db6-a17f-8766a1a23838.png) ![java70x70](https://user-images.githubusercontent.com/84586733/203624887-9f8b43ef-c605-4491-89a6-d3353d844754.png)
+# ![java70x70](https://user-images.githubusercontent.com/84586733/203627698-aa3471eb-bea8-4b34-b85d-1760f6398208.png) ![eclipse70x70](https://user-images.githubusercontent.com/84586733/203627727-b0e33f81-87b2-4eb3-9137-47b06a60aa6a.png) ![selenium70x70](https://user-images.githubusercontent.com/84586733/203627743-9af00c4f-6d85-4d2a-838b-cf66ec1b2483.png)
+
+
+
 
 
 
