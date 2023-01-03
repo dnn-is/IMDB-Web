@@ -49,7 +49,7 @@ public class BasePage extends DriverFactory {
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 	
-	public void waitToBeVisibility (WebElement element) {
+	public void waitToBeVisible (WebElement element) {
 
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
