@@ -5,7 +5,7 @@ import static core.DriverFactory.killDriver;
 import org.junit.After;
 import org.junit.Before;
 
-public class BaseTeste implements Constants {
+public class BaseTest implements Constants {
 	BasePage basePage = new BasePage();
 	
 	@Before

@@ -9,32 +9,36 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import core.BasePage;
+import core.Constants;
 
-public class PageMovieCategory extends BasePage {
-	
+public class PageMovieCategory extends BasePage implements Constants {
+
 	@FindBy(id = "imdbHeader-navDrawerOpen")
 	private WebElement menu;
-	
+
 	@FindBy(xpath = "//a[@href='/feature/genre/?ref_=nv_ch_gr']//span")
-	private WebElement gender;
-	
-	
-	
-	public void categorySelector (String category) {
-		
+	private WebElement movieGender;
+
+	public void clickMenu() {
 		click(menu);
-		click(gender);
-		
+	}
+
+	public void clickMovieGender() {
+		click(movieGender);
+	}
+
+	public void categorySelector() {
+
 //		waitToBeClickable(driver.findElement(By.xpath("//img[@alt = '"+category+"']")));
 //		driver.findElement(By.xpath("//img[@alt = '"+category+"']")).click();
-		
+
 		List<WebElement> movieCategories = getDriver().findElements(By.xpath("//img[@class='pri_image']"));
-		for(WebElement cat: movieCategories) {
-			if(cat.getAttribute("alt").contains(category)) {
+		for (WebElement cat : movieCategories) {
+			if (cat.getAttribute("alt").contains(Action)) {
 				cat.click();
 				break;
 			}
-		}	
+		}
 	}
 
 }

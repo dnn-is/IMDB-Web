@@ -10,20 +10,24 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import core.BasePage;
+import core.Constants;
 
-public class PageMovieRating extends BasePage {
+public class PageMovieRating extends BasePage implements Constants {
 	@FindBy(xpath = "//a[@class='compact']")
 	private WebElement compact;
 
 	@FindBy(xpath = "(//a[@class='lister-page-next next-page'])[1]")
-	private WebElement next;
+	private WebElement nextPage;
 
 	private int movieQuantity = 0;
 	private double movieRating = 0;
 
-	public void movieRating(double rating, int numberOfMovies) {
-		List<String> moviesSelected = new ArrayList<String>();
+	public void clickCompact() {
 		click(compact);
+	}
+
+	public void movieRating() {
+		List<String> moviesSelected = new ArrayList<String>();
 
 		do {
 			List<WebElement> movies = getDriver().findElements(By.xpath("//div[@class='lister-item-content']"));
@@ -39,7 +43,7 @@ public class PageMovieRating extends BasePage {
 				}
 
 				if (!movie.findElements(By.xpath("//div[@class='col-imdb-rating']")).get(i).getText()
-						.equalsIgnoreCase("-") && movieRating >= rating) {
+						.equalsIgnoreCase("-") && movieRating >= Rating) {
 
 					moviesSelected.add(
 							movie.findElements(By.xpath("//div[@class='col-title']")).get(i).getText().split("\\.")[1]
@@ -48,14 +52,14 @@ public class PageMovieRating extends BasePage {
 				i++;
 			}
 			movieQuantity += movies.size();
-			if(!(movieQuantity==numberOfMovies)) {
-				click(next);
+			if (!(movieQuantity == NumberOfMovies)) {
+				click(nextPage);
 			}
-			
-			
-		} while (movieQuantity < numberOfMovies);
 
-		System.out.println("Number of movies verified by the script: " + movieQuantity);
+		} while (movieQuantity < NumberOfMovies);
+
+		System.out.println(
+				"Number of objects verified by the script: " + movieQuantity + " with the rating above " + Rating);
 		for (String movie : moviesSelected) {
 			System.out.println(movie);
 		}
