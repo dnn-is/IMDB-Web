@@ -1,21 +1,24 @@
 package core;
 
-import org.junit.Test;
+import static core.DriverFactory.killDriver;
 
-import filmes.PageMovieCategory;
-import filmes.PageMovieRating;
+import org.junit.After;
+import org.junit.Before;
 
-public class BaseTeste implements Constantes {
+public class BaseTeste implements Constants {
+	BasePage basePage = new BasePage();
 	
-	PageMovieCategory pageMovieCategory = new PageMovieCategory();
-	PageMovieRating pageMovieRating = new PageMovieRating();
-	
-	@Test
-	public void test() {	
-		pageMovieCategory.url(url);
-		pageMovieCategory.categorySelector(Action);
-		pageMovieRating.movieRating(Rating,NumberOfMovies);
+	@Before
+	public void openInitialPage() {
+		basePage.openPage(url);
 	}
+	
+	@After
+	public void terminateSession() {
+		killDriver();
+	}
+	
+
 	
 
 }

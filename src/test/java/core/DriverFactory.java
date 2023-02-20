@@ -5,24 +5,24 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DriverFactory {
 	
-	private static WebDriver driver;
+private static WebDriver driver;
 	
 
-	public DriverFactory() {
+	public static WebDriver getDriver() {
 
 		if (driver == null) {
-			inicializaDriverFactory();
+			createDriver();
 		}
-	}
-
-	public static WebDriver inicializaDriverFactory() {
-
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dennis\\Documents\\Curso_Selenium\\chromedriver\\chromedriver.exe");
-		driver = new ChromeDriver();
 		return driver;
 	}
 
-	public static void finalizarDriverFactory() {
+	public static void createDriver() {
+
+		System.setProperty("webdriver.chrome.driver", "C:\\Chromedriver\\chromedriver.exe");
+		driver = new ChromeDriver();
+	}
+
+	public static void killDriver() {
 
 		if (driver != null) {
 			driver.quit();

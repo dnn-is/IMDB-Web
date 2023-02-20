@@ -1,6 +1,6 @@
 package core;
 
-public interface Constantes {
+public interface Constants {
 	
 	String url = "https://www.imdb.com/";
 	String Action = "Action";

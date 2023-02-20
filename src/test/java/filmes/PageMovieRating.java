@@ -1,5 +1,7 @@
 package filmes;
 
+import static core.DriverFactory.getDriver;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +26,7 @@ public class PageMovieRating extends BasePage {
 		click(compact);
 
 		do {
-			List<WebElement> movies = driver.findElements(By.xpath("//div[@class='lister-item-content']"));
+			List<WebElement> movies = getDriver().findElements(By.xpath("//div[@class='lister-item-content']"));
 
 			int i = 0;
 
