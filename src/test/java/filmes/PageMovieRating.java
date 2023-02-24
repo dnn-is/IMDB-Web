@@ -60,9 +60,11 @@ public class PageMovieRating extends BasePage implements Constants {
 
 		System.out.println(
 				"Number of objects verified by the script: " + movieQuantity + " with the rating above " + Rating);
-		for (String movie : moviesSelected) {
-			System.out.println(movie);
-		}
+		moviesSelected.stream().sorted().forEach(movies -> System.out.println(movies));
+
+//		for (String movie : moviesSelected) {
+//			System.out.println(movie);
+//		}
 	}
 
 }
