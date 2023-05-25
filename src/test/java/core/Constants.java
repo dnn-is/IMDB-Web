@@ -3,9 +3,9 @@ package core;
 public interface Constants {
 	
 	String url = "https://www.imdb.com/";
-	String Action = "Action";
+	String ACTION = "Action";
 	String Comedy = "Comedy";
-	double Rating = 9.0;
+	double Rating = 5.0;
 	int NumberOfMovies = 150;
 	
 

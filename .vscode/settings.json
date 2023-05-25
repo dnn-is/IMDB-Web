@@ -1,0 +1,5 @@
+{
+    "java.project.explorer.showNonJavaResources": false,
+    "java.compile.nullAnalysis.mode": "disabled",
+    "java.dependency.packagePresentation": "flat"
+}

@@ -4,11 +4,11 @@ package test;
 import org.junit.Test;
 
 import core.BaseTest;
-import core.Constants;
+
 import filmes.PageMovieCategory;
 import filmes.PageMovieRating;
 
-public class MovieSelectorScript extends BaseTest implements Constants {
+public class MovieSelectorScript extends BaseTest{
 
 	PageMovieCategory pageMovieCategory = new PageMovieCategory();
 	PageMovieRating pageMovieRating = new PageMovieRating();
